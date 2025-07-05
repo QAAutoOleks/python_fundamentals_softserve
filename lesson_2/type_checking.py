@@ -5,3 +5,4 @@ if type(i) == int:
 else:
     bool_value = False
 print(bool_value)
+print(isinstance(i, int)) # альтернатива
