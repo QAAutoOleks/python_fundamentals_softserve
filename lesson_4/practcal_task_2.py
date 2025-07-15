@@ -1,7 +1,7 @@
 decimal = int(input())
 
 result = ''
-while decimal > 0:
+while decimal: # if decimal == 0: False
     result = str(decimal % 2) + result
     decimal = decimal // 2
 
