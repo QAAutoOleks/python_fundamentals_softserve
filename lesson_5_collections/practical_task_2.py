@@ -1,7 +1,9 @@
 lst = input()
-n = input()
+n = int(input())
 
 list_of_int = [int(i.strip()) for i in lst.split(',')]
-print(list_of_int)
+list_of_int.sort()
 
-result = []
+result = None
+if n <= len(list_of_int):
+    result = list_of_int[n-1]
