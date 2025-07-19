@@ -1,10 +1,14 @@
-original = [[1, 2], [3, 4]]
+original = [[1, 2], [3, 4], 10]
 shallow = original.copy()
 original.append(99) # змінюється тільки один список
 print(original)
 print(shallow)
 
-original[0].append(777) # змінюються обидва списки
+original[0].append(777) # Змінюються обидва списки -
+# тому що перший елемент оригінального списка - mutable;
+# Якщо в першому елементі замість списку був би int - 
+# перший елемент в копії не зміниться
+original[2] = '111' # копія не зміниться
 print(original)
 print(shallow)
 
