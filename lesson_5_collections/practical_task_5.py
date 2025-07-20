@@ -9,6 +9,7 @@ for element in int_list:
     if element < num:
         counter += 1
     else:
-        result = round(100 * (len(int_list) - counter) / len(int_list), 1)
+        result = round(100 * (len(int_list) - counter) / \
+                       len(int_list), 1)
 
 print(result)
