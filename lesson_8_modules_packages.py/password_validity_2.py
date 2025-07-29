@@ -10,18 +10,14 @@ def validity_checking():
         "- Length between 7 and 15 characters (inclusive)")
     
     given_password = str(input("Please enter your password: \n"))
-    
-    checking_length = 6 < len(given_password) < 16
-    checking_lowercase = re.findall("[a-z]", given_password)
-    checking_uppercase = re.findall("[A-Z]", given_password)
-    checking_numbers = re.findall("[0-9]", given_password)
-    checking_characters = re.findall("[$#@]", given_password)
-   
-    if (checking_length and 
-    len(checking_characters) > 0 and
-    len(checking_lowercase) > 0 and
-    len(checking_numbers) > 0 and
-    len(checking_uppercase) > 0):
+
+    if (
+        6 < len(given_password) < 16 and 
+        re.findall("[a-z]", given_password) and
+        re.findall("[A-Z]", given_password) and
+        re.findall("[0-9]", given_password) and
+        re.findall("[$#@]", given_password)
+    ):
         print("Password meets requirements")
     else:
         print("Password does not meet requirements")
