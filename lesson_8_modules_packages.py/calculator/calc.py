@@ -1,4 +1,4 @@
-import module_with_functions
+import module_with_functions as calc_module
 
 def main():
     print("Choose operation:")
@@ -9,9 +9,15 @@ def main():
 
 main()
 chosen_option = int(input())
-number_1 = int(input("Enter number 1: "))
-number_2 = int(input("Enter number 2: "))
 
 match chosen_option:
     case 1:
-        module_with_functions.addition(number_1, number_2)
+        calc_module.addition()
+    case 2:
+        calc_module.subtraction()
+    case 3:
+        calc_module.multiplication()
+    case 4:
+        calc_module.division()
+    case _:
+        print("Input ERROR")
