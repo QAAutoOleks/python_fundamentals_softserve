@@ -9,7 +9,7 @@ def calculating_area_of_rectangle():
     length_rectangle = float(input("Enter the length of the rectangle: "))
     width_rectangle = float(input("Enter the width of the rectangle: "))
     print(f"The area of the rectangle is equal to " +
-          f"{round(length_rectangle * width_rectangle, 2)}")
+          f"{length_rectangle * width_rectangle: .2f}")
     
 def calculating_area_of_triangle():
     """
