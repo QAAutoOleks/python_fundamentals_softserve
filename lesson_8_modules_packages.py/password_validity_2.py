@@ -2,6 +2,11 @@ import re
 
 
 def checking_validity_conditions(given_password: str) -> bool:
+    '''
+    The function takes a string (given_password) and 
+    returns True if all of the passwords requirements are met
+    '''
+    
     return (
         6 < len(given_password) < 16 and 
         re.findall("[a-z]", given_password) and
@@ -11,6 +16,12 @@ def checking_validity_conditions(given_password: str) -> bool:
     )
 
 def getting_password_and_checking_conditions():
+    '''
+    The function informs the user about the password requirements,
+    receives the password and checks if all validity conditions
+    are met using checking_validity_conditions() function
+    '''
+
     print("Password must contain:\n"
         "- At least 1 lowercase letter [a-z]\n"
         "- At least 1 uppercase letter [A-Z]\n"
