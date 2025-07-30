@@ -22,3 +22,8 @@ def division():
     required_numbers = input_numbers_getting()
     return print("The quotient of the division Number 1 by Number 2 is equal: {}"
                  .format(required_numbers[0] / required_numbers[1]))
+
+if __name__ == '__main__':
+    print("Hello from module 'module_with_functions'!")
+else:
+    print("Hello from module 'Calculator'!")

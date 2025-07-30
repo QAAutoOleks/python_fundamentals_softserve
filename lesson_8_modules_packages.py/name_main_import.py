@@ -5,4 +5,7 @@ import sys
 # Output with empty file: File was run indirectly
 
 # print(dir(name_main))
-print(sys.path)
+# print(sys.path)
+
+print(name_main.__name__) # name_main
+print(__name__) # __main__
