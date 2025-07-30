@@ -1,7 +1,16 @@
 import re
 
 
-def validity_checking():
+def checking_validity_conditions(given_password: str) -> bool:
+    return (
+        6 < len(given_password) < 16 and 
+        re.findall("[a-z]", given_password) and
+        re.findall("[A-Z]", given_password) and
+        re.findall("[0-9]", given_password) and
+        re.findall("[$#@]", given_password)
+    )
+
+def getting_password_and_checking_conditions():
     print("Password must contain:\n"
         "- At least 1 lowercase letter [a-z]\n"
         "- At least 1 uppercase letter [A-Z]\n"
@@ -11,15 +20,9 @@ def validity_checking():
     
     given_password = str(input("Please enter your password: \n"))
 
-    if (
-        6 < len(given_password) < 16 and 
-        re.findall("[a-z]", given_password) and
-        re.findall("[A-Z]", given_password) and
-        re.findall("[0-9]", given_password) and
-        re.findall("[$#@]", given_password)
-    ):
+    if checking_validity_conditions(given_password):
         print("Password meets requirements")
     else:
         print("Password does not meet requirements")
 
-validity_checking()
+getting_password_and_checking_conditions()
