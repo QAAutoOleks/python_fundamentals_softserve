@@ -1,4 +1,4 @@
-class A:
+class FirstClass:
 
     def __init__(self, name, colour, kind='None'):
         self.name = name
@@ -8,9 +8,17 @@ class A:
     def sing_song(self, name_song):        
         return f'Parrot {self.name} sings song {name_song}'
     
+    @classmethod
+    def class_method(cls):
+        return cls
 
-parrot = A('Ra', 'turquoise')
+    @staticmethod
+    def static_method():
+        return 'Hello!'
+    
+
+parrot = FirstClass('Ra', 'turquoise')
 print(parrot.sing_song('Lalala'))
 
 # A.sing_song('happy') - TypeError because odject is not created
-print(A.sing_song(parrot, 'happy')) # Parrot Ra sings song happy
+print(FirstClass.sing_song(parrot, 'happy')) # Parrot Ra sings song happy
