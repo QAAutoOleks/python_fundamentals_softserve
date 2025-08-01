@@ -6,4 +6,8 @@ class A:
         self.kind = kind
 
     def sing_song(self, name_song):        
-        print(f'Parrot {self.name} sing song {name_song}')
+        return f'Parrot {self.name} sing song {name_song}'
+    
+
+parrot = A('Ra', 'turquoise')
+print(parrot.sing_song('Lalala'))
