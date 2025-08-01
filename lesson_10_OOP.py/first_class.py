@@ -6,8 +6,11 @@ class A:
         self.kind = kind
 
     def sing_song(self, name_song):        
-        return f'Parrot {self.name} sing song {name_song}'
+        return f'Parrot {self.name} sings song {name_song}'
     
 
 parrot = A('Ra', 'turquoise')
 print(parrot.sing_song('Lalala'))
+
+# A.sing_song('happy') - TypeError because odject is not created
+print(A.sing_song(parrot, 'happy')) # Parrot Ra sings song happy
