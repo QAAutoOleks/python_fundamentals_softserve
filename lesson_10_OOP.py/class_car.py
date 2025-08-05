@@ -9,6 +9,8 @@ class Car:
 
     def run_method(self):
         self.__class__.status = 'Run'
+        print('Car started')
 
     def stop_method(self):
         self.__class__.status = 'Stop'
+        print('Car stopped')
