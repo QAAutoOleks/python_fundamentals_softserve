@@ -7,9 +7,9 @@ class CustomError(Exception):
     
 def valid_number(input_number):
     if not isinstance(input_number, int):
-        raise TypeError('Number must be integer')
+        raise CustomError('Number must be integer')
     elif input_number == 0:
-        raise ValueError('Number can\'t be zero')
+        raise CustomError('Number can\'t be zero')
         
 user_input = int(input('Enter data: '))
 
