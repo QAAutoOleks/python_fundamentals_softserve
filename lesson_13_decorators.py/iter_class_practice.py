@@ -5,17 +5,18 @@ class ClassIter:
         return self
     
     def __next__(self):
-        x = self.a
-        self.a += 1
-
-        return x
+        
+        if self.a < 3:
+            x = self.a
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
     
 
 iter_obj = ClassIter()
 iter(iter_obj)
 
-print(next(iter_obj))
-print(next(iter_obj))
 print(next(iter_obj))
 print(next(iter_obj))
 print(next(iter_obj))
