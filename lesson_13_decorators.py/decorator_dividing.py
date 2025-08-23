@@ -12,5 +12,3 @@ def smart_dividing(func):
 @smart_dividing
 def dividing(a, b):
     return a / b
-
-print(dividing(4, 0))
