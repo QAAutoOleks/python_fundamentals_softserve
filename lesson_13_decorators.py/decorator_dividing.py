@@ -4,7 +4,7 @@ def smart_dividing(func):
     def inner(a, b):
         if b == 0:
             print('ZeroDivisionError')
-            return        
+            return None
         return func(a, b)
     
     return inner

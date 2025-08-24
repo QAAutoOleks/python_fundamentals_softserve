@@ -4,10 +4,10 @@ def range_generator(num):
         yield x
         x += 1
 
-value = range_generator(5)
-print(value)
-print(next(value))
-print(next(value))
-print(next(value))
-print(next(value))
-print(next(value))
+# value = range_generator(5)
+# print(value)
+# print(next(value))
+# print(next(value))
+# print(next(value))
+# print(next(value))
+# print(next(value))
