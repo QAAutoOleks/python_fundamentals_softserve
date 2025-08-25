@@ -7,7 +7,12 @@ class TestFunctions(unittest.TestCase):
 
     def test_dividing(self):
         self.assertEqual(decorator_dividing.dividing(6, 3), 2)
-        self.assertEqual(decorator_dividing.dividing(6, 0), None)
+        self.assertRaises(ZeroDivisionError, decorator_dividing.dividing, 6, 0)
+        # self.assertRaises(ZeroDivisionError, decorator_dividing.dividing, (6, 0)) - ERROR
+        
+        # the same as previous
+        with self.assertRaises(ZeroDivisionError):
+            decorator_dividing.dividing(5, 0)
 
     def test_range_generator(self):
         value = range_generator.range_generator(1)
