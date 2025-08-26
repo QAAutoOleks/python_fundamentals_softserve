@@ -1,7 +1,7 @@
 def enum_map(func):
 
-    def wrapper(given_str):      
-        created_list = func(given_str)
+    def wrapper(*args, **kwargs):      
+        created_list = func(*args, **kwargs)
 
         result = []
         for j, a in enumerate(created_list):
